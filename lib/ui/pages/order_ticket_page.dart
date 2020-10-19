@@ -21,7 +21,7 @@ class _OrderTicketPageState extends State<OrderTicketPage> {
   _OrderTicketPageState(this.title);
 
   List<Widget> scheduleList = [];
-
+  List<bool> isSelected = [true, false, false, false, false, false, false];
   @override
   Widget build(BuildContext context) {
 
@@ -42,14 +42,13 @@ class _OrderTicketPageState extends State<OrderTicketPage> {
               children: [
                 CustomToggleButtons(
                   spacing: 30,
-                  isSelected: writeSelected(),
+                  isSelected: isSelected,
                   unselectedFillColor: Colors.grey.withOpacity(0.2),
                   disabledBorderColor: Colors.red,
                   borderRadius: 50,
                   selectedColor: Colors.white,
                   fillColor: Colors.blue,
                   onPressed: (index) {
-                    var isSelected = writeSelected();
                     setState(() {
                       for (int i = 0; i < isSelected.length; i++) {
                         isSelected[i] = (i == index) ? true : false;

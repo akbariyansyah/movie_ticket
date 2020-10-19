@@ -81,7 +81,3 @@ List<Widget> writeSeatStatus() {
   ];
   return seatStatus;
 }
-List<bool> writeSelected() {
-  List<bool> isSelected = [true, false, false, false, false, false, false];
-  return isSelected;
-}
