@@ -32,6 +32,7 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
     debugPrint("Context Confirmation Peage " + context.hashCode.toString());
 
     return Scaffold(
+      backgroundColor: primaryWhite,
       body: Center(
             child: Container(
                     child: Image(
